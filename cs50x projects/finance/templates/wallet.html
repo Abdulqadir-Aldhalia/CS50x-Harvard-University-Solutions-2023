@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    wallet
+{% endblock %}
+
+{% block main %}
+<h2>Your Cash = {{cash[0]['cash']|usd}}<br><br></h2>
+<form action="/wallet" method="post">
+    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="quote" name="number" placeholder="Enter the value" type="number">
+    <div><br><br></div>
+    <button class="btn btn-primary" type="submit">Charge Now</button>
+</form>
+
+{% endblock %}

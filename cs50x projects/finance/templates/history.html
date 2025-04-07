@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     history
+{% endblock %}
+
+
+{% block main %}
+<table class = "table"  >
+    <thead>
+        <tr>
+            <th>Operation</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{record['operation']}}</td>
+            <td>{{record['quote_symbol']}}</td>
+            <td>{{record['shares']}}</td>
+            <td>{{record['date']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googlehttp://127.0.0.1:51985apis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+        // Wait for the document to be ready
+        document.addEventListener("DOMContentLoaded", function() {
+            // TODO: Add code to check answers to questions
+            var buttons = document.getElementsByClassName("choice");
+            // Use a for...of loop to iterate through the collection
+            for (var button of buttons) {
+                button.addEventListener ("click", function(event){
+
+                    var btn = event.target;
+
+                    if (btn.id == "none"){
+                        btn.style.backgroundColor = "green";
+                        alert("Correct");
+                    }
+                    else {
+                        btn.style.backgroundColor = "red";
+                        alert("Incorrect");
+                    }
+                });
+            }
+
+            document.querySelector("#submit").addEventListener("click", function(event) {
+
+                    event.preventDefault();
+                    let input = document.querySelector("#input");
+
+                    if (input.value.toLowerCase() != "washington") {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#answer").innerHTML = "InCorrect!";
+                    } else {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#answer").innerHTML = "Correct!";
+                    }
+                });
+        });
+
+
+            </script>
+        </head>
+        <body>
+            <div class="header">
+                <h1>Trivia!</h1>
+            </div>
+
+            <div class="container">
+                <div class="section">
+                    <h2>Part 1: Multiple Choice </h2>
+                    <hr>
+                    <h3>What is the name of libyan presedent in 2023?</h3>
+                    <button type ="button" class = "choice">Moamer Elgadafi</button>
+                    <button type ="button" class = "choice">Khalifa hafter</button>
+                    <button type ="button" class = "choice">Dobiba</button>
+                    <button type ="button" class = "choice" id = "none">There is no presedent</button>
+                    <!-- TODO: Add multiple choice question here -->
+                </div>
+
+                <div class="section">
+                    <h2>Part 2: Free Response</h2>
+                    <hr>
+                    <h3> what is the capital of United States?</h3>
+                    <h3 id = "answer"></h3>
+                    <form>
+                        <input  type = "text" id = "input">
+                        <button type = "submit" id = "submit">Submit</button>
+                    </form>
+                    <!-- TODO: Add free response question here -->
+                </div>
+            </div>
+        </body>
+    </html>

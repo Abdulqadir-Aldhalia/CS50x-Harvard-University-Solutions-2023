@@ -1,0 +1,17 @@
+sort1 uses: Bubble sort
+
+
+How do you know?: it gave bade performance in the reverse and random but it was good in the sorted data specially big sorted data(sorted50000)
+
+
+sort2 uses: Merge sort
+
+
+How do you know?: it gave an brilliant performance in random and reverse data
+
+
+sort3 uses:Selection sort
+
+
+How do you know?: it gave a good perfomance in reversed5000,10000 and random5000
+

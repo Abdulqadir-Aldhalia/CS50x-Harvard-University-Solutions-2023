@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Successful
+{% endblock %}
+
+{% block main %}
+<form action="/login" method="get">
+    <center>
+        <h1>{{placeholder}} Successful</h1>
+    </center>
+    {% if placeholder == "Registration"%}
+    <button class="btn btn-primary" type="submit">Log In now</button>
+    {% endif %}
+</form>
+{% endblock %}

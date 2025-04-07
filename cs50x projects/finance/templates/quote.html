@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<h1>Find quote</h1>
+<form action="/quote" method="post">
+    <div class="mb-3">
+
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="quote" name="symbol" placeholder="search" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">search</button>
+</form>
+{% if quotes %}
+<table class = "table"  >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{quotes["name"]}}</td>
+            <td>{{quotes["symbol"]}}</td>
+            <td>{{quotes["price"]|usd}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

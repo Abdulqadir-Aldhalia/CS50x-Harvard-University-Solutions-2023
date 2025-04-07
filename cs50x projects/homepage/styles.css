@@ -1,0 +1,75 @@
+
+* {
+    padding:0px;
+    margin:0px;
+}
+.Home_about_MIT p {
+    display: block;
+    width: 700px;
+}
+.Home_about_MIT  {
+    margin-left:100px;
+    margin-top:100px;
+}
+
+.fs-40 {
+    font-size:40px;
+}
+.font-size-barItem {
+    font-size:20px;
+}
+.corsair-effect ul li :hover {
+    text-decoration: underline;
+}
+
+#about {
+    font-size:30px;
+    color: black;
+    font-family: bold;
+
+}
+
+.container {
+    display: grid;
+    padding:10px;
+    margin-left:0;
+    margin-top:100px;
+    gap: 10px;
+    grid-template-columns: repeat(2, 400px);
+    /*width:100vw;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction:row;/*
+   /* justify-content: center;*/
+   /* padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 20px;*/
+
+
+
+}
+
+.image_container {
+    width: auto;
+    height: auto; /* Adjusts height based on the image aspect ratio*/
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images fill the container without distorting*/
+    border: 10px solid black;
+    cusore:pointer;
+    transformation: 0.4s;
+}
+img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgb (68,77,136,0.2);
+}
+.img-thumbnail {
+    border:solid black;
+}
+
+
